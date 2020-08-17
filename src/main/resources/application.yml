@@ -1,0 +1,8 @@
+time-service:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: http://localhost:4444, http://localhost:5555
+eureka:
+  client:
+    enabled: false
