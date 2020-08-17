@@ -1,5 +1,6 @@
 package com.github.adetiamarhadi.springcloudribbontimeapp;
 
+import com.github.adetiamarhadi.springcloudribbontimeapp.config.RibbonTimeConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-@RibbonClient(name = "time-service")
+@RibbonClient(name = "time-service", configuration = RibbonTimeConfig.class)
 @RestController
 public class SpringCloudRibbonTimeAppApplication {
 
